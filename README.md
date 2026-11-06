@@ -1,40 +1,29 @@
 # Kotlin Fundamentals & Laboratory Exercises
 
-Raccolta di esercizi pratici, teoria e primi algoritmi sviluppati durante le lezioni e le esercitazioni di laboratorio di Mobile Computing (EveryWareLab).
+Raccolta di esercizi pratici, teoria e pattern sviluppati durante le lezioni e le esercitazioni di laboratorio di Mobile Computing (EveryWareLab).
 
-Il repository documenta il percorso di apprendimento del linguaggio **Kotlin**, focalizzandosi sui concetti cardine del linguaggio, la sintassi idiomatica e la forte interoperabilità con l'ecosistema Java e la JVM.
+Il repository documenta il percorso di apprendimento del linguaggio **Kotlin**, focalizzandosi sui costrutti avanzati, la programmazione orientata agli oggetti (OOP) e l'interoperabilità con la JVM.
 
 ---
 
-## 📌 Argomenti Trattati (Lezione 15)
+## 📌 Argomenti Trattati
 
-* **Sintassi di Base e Tipizzazione:**
-  * Dichiarazione di variabili immutabili (`val`) e mutabili (`var`).
-  * *Type Inference* (inferenza automatica del tipo) e tipizzazione esplicita[cite: 7].
-  * Conversioni di tipo esplicite (es. `.toInt()`, `.toDouble()`) per evitare promozioni automatiche ambigue[cite: 7].
-  * Interpolazione di stringhe con `$` e `${...}`[cite: 7].
-  * Uguaglianza strutturale (`==` che mappa su `.equals()`) vs uguaglianza di riferimento (`===`)[cite: 7].
+### 1. Fondamenti e Funzionale (Lezione 17)
+* **Sintassi di Base e Tipizzazione:** Variabili (`val` / `var`), inferenza di tipo (*type inference*) e conversioni esplicite (`.toInt()`)[cite: 7].
+* **Null Safety:** Tipi nullable (`T?`), operatori di chiamata sicura (`?.`), pattern `?.let { ... }` ed operatore Elvis (`?:`)[cite: 10, 11].
+* **Control Flow:** Gestione di range (`..`, `until`), espressioni `if` e `when`[cite: 9].
+* **Funzioni e Lambda:** Funzioni di ordine superiore, lambda expressions, sintassi *trailing lambda*, uso della variabile `it` e *closures*[cite: 13, 14, 15].
 
-* **Strutture di Controllo e Intervalli:**
-  * Gestione dei range (`..` inclusivo, `..<` o `until` escluso, `downTo`, `step`)[cite: 9].
-  * Il costrutto `if` come espressione (che sostituisce l'operatore ternario)[cite: 9].
-  * Il costrutto `when` come evoluzione dello switch (con o senza argomento, match su range ed espressioni)[cite: 9].
-
-* **Null Safety & Gestione dei Nullabili:**
-  * Tipi nullable (`T?`) per prevenire le `NullPointerException` a tempo di compilazione[cite: 10].
-  * *Smart Cast*: il compilatore riconosce automaticamente i controlli di non-nullità (`if (a != null)`)[cite: 10].
-  * Operatore di chiamata sicura (`?.`) e pattern `?.let { ... }`[cite: 11].
-  * Operatore Elvis (`?:`) per valori di fallback[cite: 11].
-
-* **Collezioni (Collections):**
-  * Distinzione tra collezioni immutabili (`List`, `Set`, `Map`) e mutabili (`MutableList`, `MutableSet`, `MutableMap`)[cite: 7].
-  * Utilizzo di `Pair` e dell'operatore infisso `to` per la dichiarazione di mappe[cite: 7, 8].
-
-* **Funzioni e Programmazione Funzionale:**
-  * Funzioni top-level e parametri con valori di default o nominati[cite: 11, 12].
-  * Funzioni a singola espressione (*single-expression functions*)[cite: 12].
-  * Funzioni di ordine superiore (*higher-order functions*) che accettano altre funzioni come parametri[cite: 13, 14].
-  * Lambda expressions, sintassi *trailing lambda*, uso della variabile implicita `it` e *closures* (cattura del contesto)[cite: 14, 15].
+### 2. Object-Oriented Programming in Kotlin (Lezione 18)
+* **Classi e Costruttori:** Costruttore primario integrato nella classe (`class Person(val name: String)`) e costruttori secondari concatenati tramite `constructor(...) : this(...)`[cite: 28, 29, 34, 35].
+* **Inizializzazione:** Uso del blocco `init` per l'esecuzione di codice generico all'atto della creazione dell'istanza[cite: 33].
+* **Data Classes & Enum Classes:** Classi di dati con generazione automatica di `equals`, `toString`, `copy`[cite: 38] ed enumerazioni gestite tramite `when`[cite: 39].
+* **Proprietà Avanzate:** Getter e setter personalizzati con la variabile di supporto implicita `field`, e *computed properties* (proprietà calcolate al volo)[cite: 41, 43].
+* **Pattern Singleton e Membri Statici:** Utilizzo di `object` per i singleton e di `companion object` all'interno delle classi[cite: 48, 49, 50].
+* **Ereditarietà e Polimorfismo:** Classi e membri chiusi di default (keyword `open`), classi astratte, interfacce e l'obbligo di usare la keyword `override`[cite: 53, 54, 57, 58].
+* **Smart Cast e Controllo dei Tipi:** Operatore `is` (analogo a `instanceof`) per il cast implicito e gestione del downcasting[cite: 63].
+* **Extension Functions / Properties:** Aggiunta di metodi e proprietà a classi esistenti senza modificarne il codice sorgente[cite: 70].
+* **Scope Functions:** Funzioni predefinite come `.let`, `.run`, `.with`, `.apply`, `.also` per scrivere codice compatto[cite: 75, 76].
 
 ---
 
